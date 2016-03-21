@@ -1,0 +1,11 @@
+$ strings numbers.png
+
+{y0u_f0uNd_th3_1st_p4rt
+
+Now, open up the image and translate the numbers that appear into their ascii representations:
+
+>>> a = "95 97 78 100 95 110 48 119 95 121 48 117 95 102 48 117 110 100 95 116 104 51 95 111 116 104 51 114 125".split()
+>>> "".join([chr(int(x)) for x in a])
+'_aNd_n0w_y0u_f0und_th3_oth3r}'
+
+{y0u_f0uNd_th3_1st_p4rt_aNd_n0w_y0u_f0und_th3_oth3r}
