@@ -1,0 +1,7 @@
+If we look at our cookies for the page, we find an auth cookies with the value of 0.
+Let's change that to 1 and reload the page. We also find a cookie with the value of
+"such_js_cookiez", which will be helpful later.
+
+If we input "such_js_cookiez" as the password, we get the flag
+
+{americans_and_sweet_things}
