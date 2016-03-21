@@ -1,0 +1,16 @@
+The javascript is just running a function on some arguments, so we probably want to print out the result of that
+evaluation. We can do so by redefining the function to console.log(b) before returning it.
+
+As a result, we get:
+
+var _0xaeaf=["\x31\x33\x34\x34","\x39\x38\x36\x34","\x34\x33\x31\x31","\x33\x31\x32\x33"];var c=_0xaeaf[0];var e=_0xaeaf[1];var o=_0xaeaf[2];var d=_0xaeaf[3];
+
+Looking at the variable names, we find the variables "c", "e", "o", and "d".
+
+Notice how it spells code, and print out its values in order.
+>> c + o + d + e
+1344431131239864
+
+Use that as the password to get the flag.
+
+{still_in_the_c0de}
