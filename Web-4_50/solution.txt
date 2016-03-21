@@ -1,0 +1,11 @@
+Looking at the source reveals the following:
+
+var a = "b";var b = "a";function bar( barr ){return barr( barr ) + a + b + c + barr( barr );}function barr(){return "k";}var c = "r";
+
+If we look at the bar function, we realize that it doesn't really do anything with the parameter, just adding barr(), a, b, and c together.
+
+Looking at the values of the variables, it's pretty easy to construct the correct password: kbark
+
+Inputting that as the password gives us the flag.
+
+{variables_n_functionz}

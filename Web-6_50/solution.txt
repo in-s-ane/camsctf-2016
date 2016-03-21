@@ -1,0 +1,4 @@
+If we look at our cookies, we can see an "authorized" cookie with the value of false.
+If we change that to true and reload the page, we get the password that we need to get the flag.
+
+{digital_cookies_go0o0o0d}

@@ -1,0 +1,3 @@
+Guessing 'password' as the password gives us the flag.
+
+{all_in_the_c0de}

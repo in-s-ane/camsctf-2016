@@ -1,0 +1,6 @@
+The password can be found within a comment in the source.
+
+<!--butit'snotvisible-->
+
+Entering that as the password gives us the flag.
+{i_got_de_basics}
