@@ -1,0 +1,8 @@
+In the login form, we put in
+' OR 1 LIKE 1 -- 
+as both the username and password.
+We are then directed to a page 
+"The password is ( i_<3_sql_injections )" - C4pt4in Troll
+Submitting the given password in the box gives us the flag.
+
+{vulner4bility_Exi3ts}
