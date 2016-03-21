@@ -1,0 +1,11 @@
+base32 decoded:
+MmUhbWYxKkFBMCs+WWt0MkU7bTwxRVxQZSs+dSwjMklkamMxYSJcOCs/KmdSME91OltAMz4ge2g0MWZ3YXlfdGgzcmV9
+
+base64 decoded:
+2e!mf1*AA0+>Ykt2E;m<1E\Pe+>u,#2Idjc1a"\8+?*gR0Ou:[@3> {h41fway_th3re}
+
+ascii85 decoded:
+7b 62 34 35 69 63 5f 66 6c 34 67 7d 0d 0
+
+hex decoded:
+{b45ic_fl4g}
