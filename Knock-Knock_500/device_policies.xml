@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<policies>
+<admin name="com.google.android.gms/com.google.android.gms.mdm.receivers.MdmDeviceAdminReceiver">
+<policies flags="28" />
+</admin>
+<active-password quality="36864" length="7" uppercase="0" lowercase="0" letters="0" numeric="7" symbols="0" nonletter="7" />
+</policies>
