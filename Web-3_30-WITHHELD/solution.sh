@@ -10,4 +10,4 @@ while read line; do
 done < passwords.txt
 
 # {"correct":1,"reply":"Flag: nev3r_use_123456"}
-# {nev3r_use_123456 }
+# {nev3r_use_123456}
