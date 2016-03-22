@@ -1,0 +1,4 @@
+There's a QR code in the image.
+Scanning the QR code gives the flag.
+
+{SWAG_5w4g_wh47_c0uld_g0_b4d?}
