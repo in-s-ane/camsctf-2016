@@ -1,0 +1,14 @@
+The url embedded in the page http://web.camsctf.com/meow/
+is this:
+http://scratch.mit.edu/projects/embed/BCGAIDBB/?autostart=true
+
+However, scratch project ids are numbers, not letters.
+Converting each letter to its position in the alphabet leads to
+https://scratch.mit.edu/projects/23719422/
+
+Clicking the play/start button, we can see a flag blocked by a bunch of
+cat heads. Clicking "See Inside" gives us access to the sprites,
+which includes a picture of the flag.
+https://scratch.mit.edu/projects/23719422/#editor
+
+{scr4tch_c4t}
