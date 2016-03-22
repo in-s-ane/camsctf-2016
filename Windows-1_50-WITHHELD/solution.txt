@@ -1,0 +1,5 @@
+Opening up the vm reveals that the left and right mouse clicks have been inverted.
+If we open up cmd.exe and list the contents of C:\Documents and Settings\User\Start Menu\Programs\Startup,
+we find a file called rundll32_swap.bat
+
+{rundll32_swap.bat}
