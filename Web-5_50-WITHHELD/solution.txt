@@ -1,0 +1,52 @@
+omg... this question is so troll :'(
+
+Their response.js file is tampered and is different from the other web
+questions.
+
+Line 7: formData.append( 'answer', 'password' );
+
+SHOULD BE:
+
+formData.append( 'answer', $( '[name="password"]' ).prop( 'value' ) );
+
+Go to the console and paste this in:
+
+$(document).ready(function() {
+	$( 'form' ).submit
+	(
+		function()
+		{
+			var formData = new FormData();    
+			formData.append( 'answer', $( '[name="password"]' ).prop( 'value' ) );
+				
+			$.ajax({
+				type: 'POST',
+				url: 'check.php',
+				data: formData,
+				dataType: 'JSON',
+				processData: false, 
+				contentType: false,
+				success: function( data )
+				{
+					if( data.correct == 1 )
+					{
+						$( '#response' ).empty();
+						$( '#response' ).text( data.reply ).css( 'color', '#0e0' ).show();
+					}
+					else
+					{
+						$( '#response' ).empty();
+						$( '#response' ).text( data.reply ).css( 'color', 'red' ).show().fadeOut( 2000 );
+					}
+				}
+			});
+			
+			return false;
+		}
+	);
+});
+
+Submit the password: PaSswOrD1@3$5^
+
+Flag: never_trust_what_a_tr0ll
+
