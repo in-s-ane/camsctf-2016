@@ -18,4 +18,4 @@ for x in range(width):
 img.save("out.png")
 
 # Read the flag backwards
-# {C6H1206}
+# {C6H12O6}
