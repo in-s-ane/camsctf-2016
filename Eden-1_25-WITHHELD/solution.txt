@@ -1,0 +1,31 @@
+Question: An investigator approached CAMS CSC via social media regarding the
+supposed suicide of Eden Sterling. What is his name? For reference, all flags
+should be submitted in the format of {answer}.
+
+We can go on the CAMS CSC FaceBook page:
+
+https://www.facebook.com/groups/1418538045055499/
+
+There is a post that says:
+
+Hello CCTF Competitors.
+My name is Mack Millan and I am the lead forensics investigator in the case of
+Eden Sterling. You must have heard the tragic suicide of Eden Sterling by now.
+He was found dead outside of his house. From what my team could recover, it
+appears that Eden climbed onto the roof of his three story house and jumped at
+night. I understand that the whole situation is very unsettling. If you didn't
+know, Eden was a really talented programmer at Hacker High School. He always had
+the top scores in his class. However, earlier today, my team received an
+anonymous tip-off email with a suspiciously large PDF attachment. We were
+explicitly told to not open the attachment and to pass the attachment onto your
+team. You probably know that my team is composed of biology and chemistry major
+graduates. We are clueless when it comes to digital forensics and it appears
+that this investigation will now need to go digital. I cannot provide you with
+much to start your investigation, considering that the censorious principal of
+Hacker High School does not want us to question the students too much and that
+Eden's parents would not permit further analysis of his personal items (laptops,
+cell phones, etc.). All we have is the suspicious attachment.
+Good luck, and be careful.
+
+Flag: {Mack Millan}
+
