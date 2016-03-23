@@ -1,0 +1,13 @@
+Running `file` on the file reveals that the first file is a kgb archive, so we can just run
+`kgb time` to decompress it.
+
+Successfully decompressing the archive reveals another sfArk archive, which we can extract via
+sfarkxtc (https://github.com/raboof/sfarkxtc).
+
+This finally reveals a sound file, which we can import as raw data in audacity.
+At a glance, all it seems to be saying is "aint nobody got time", but there's a tiny part that really stands out.
+We can extract that data into another file (see extracted.wav).
+
+Opening up the wav file in spek (yay neoctf), we see the flag.
+
+{G0T_71m3_4_M33333}
