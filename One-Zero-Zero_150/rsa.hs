@@ -3,15 +3,19 @@ import Data.Char (ord, chr)
 -- | Extended Euclidean Algorithm: egcd a b => (g, x, y) means g = ax + by in
 -- lowest forms. Hopefully g == 1 (which implies x, y are coprime)
 egcd :: Int -> Int -> (Int, Int, Int)
-egcd 0 b = (b, 0, 1)
-egcd a b = let (g, y, x) = egcd (b `mod` a) a in (g, x - ((b `div` a) * y), y)
+egcd a 0 = (1, 0, a)
+egcd a b = let (q, r) = a `quotRem` b
+               (s, t, g) = egcd b r
+           in (t, s - q * t, g)
 
 -- Finds the inverse of the first argument mod the second argument
 modinv :: Int -> Int -> Int
 modinv a m
-    | g == 1    = x `mod` m
-    | otherwise = error "Modular inverse does not exist"
-    where (g, x, y) = egcd a m
+    | g == 1    = mkPos i
+    | otherwise = error "modular inverse does not exist"
+    where (i, _, g) = egcd a m
+          mkPos x = if x < 0 then x + m else x
+
 
 -- Converts an ascii string into a decimal number
 ascii2Decimal :: [Char] -> Int
@@ -46,6 +50,7 @@ main = do
         d = 27856072577004096911396713846850363584417408026591016459417310603194644749492416868137791178719126
         currdecrypt c = rsaDecrypt c d n
      in do
+         print $ modinv e n
          print $ rsaEncrypt (currdecrypt 202915876039746229935722670340487424839857163073658749653272992778826868242273898753310832920993983342) e n
          print $ currdecrypt 202915876039746229935722670340487424839857163073658749653272992778826868242273898753310832920993983342
          print $ currdecrypt 51961498721312088747682686810774742575925154117134413172365649620137208443557184957215829783811743351
