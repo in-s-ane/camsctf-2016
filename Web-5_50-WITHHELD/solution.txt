@@ -16,15 +16,15 @@ $(document).ready(function() {
 	(
 		function()
 		{
-			var formData = new FormData();    
+			var formData = new FormData();
 			formData.append( 'answer', $( '[name="password"]' ).prop( 'value' ) );
-				
+
 			$.ajax({
 				type: 'POST',
 				url: 'check.php',
 				data: formData,
 				dataType: 'JSON',
-				processData: false, 
+				processData: false,
 				contentType: false,
 				success: function( data )
 				{
@@ -40,7 +40,7 @@ $(document).ready(function() {
 					}
 				}
 			});
-			
+
 			return false;
 		}
 	);
@@ -48,5 +48,5 @@ $(document).ready(function() {
 
 Submit the password: PaSswOrD1@3$5^
 
-Flag: never_trust_what_a_tr0ll
+Flag: {never_trust_what_a_tr0ll}
 
