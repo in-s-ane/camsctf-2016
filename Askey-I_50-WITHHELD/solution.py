@@ -4,6 +4,6 @@ flag = ""
 for char in enc:
     flag += chr(ord(char) - 13)
 
-print flag
+print flag.strip("flag") # Flag format...
 
-# flag{utf-8anyone?no?fine}
+# {utf-8anyone?no?fine}
