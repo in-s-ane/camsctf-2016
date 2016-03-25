@@ -1,0 +1,6 @@
+The problem tells us to look for Troy Daley's photo, so let's perform a global search
+on the disk for all photos.
+
+In hindsight, I probably could have found it earlier if I applied "troy" as a search filter.
+
+{this_is_how_to_destroy_troy}
