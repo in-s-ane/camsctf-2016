@@ -1,0 +1,4 @@
+Performing a global search for all files containing "flag", we comes across one file
+called desktop.ini. Open it up to find the flag.
+
+{hidden_attributes_ini}
