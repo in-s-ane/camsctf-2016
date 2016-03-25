@@ -1,0 +1,6 @@
+If we browse through User's folder using the file explorer, we find a folder named
+"Michael Johanis's Documents". The folder's real name is "My Documents", so we are really looking
+at User's documents. If we view all the files in the folder, we find desktop.ini.
+Viewing the file gives us the flag.
+
+{hidden_attributes_ini}
