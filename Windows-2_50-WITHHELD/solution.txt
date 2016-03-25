@@ -1,0 +1,3 @@
+Opening up "Recycle Bin.exe" on the desktop in notepad will give us the password to Data Storage's account.
+
+{oh_how_viruses_go}
