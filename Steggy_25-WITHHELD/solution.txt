@@ -1,0 +1,5 @@
+We install wbStego4, run it using wine, select the file, and decode
+with no password.
+The resultant file is unsteggy.txt
+
+{t3Xt_with1n_text}
