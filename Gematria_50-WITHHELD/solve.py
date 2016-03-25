@@ -4,4 +4,6 @@ b = hex(a)[2:-1]
 c = [b[i:i+2] for i in range(0,len(b), 2)]
 d = "".join([chr(int(x,16)) for x in c])
 
-print d
+print d.strip("flag")
+
+# {1_b3t_"y0u"_b3c0m3s_a_z3r0}
