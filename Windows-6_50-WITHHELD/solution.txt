@@ -1,0 +1,8 @@
+Upon logging into Data Storage's account, we are greeted with a shutdown message.
+Going into Run>msconfig>startup, we find two suspicious programs being run on startup:
+shutdown.bat.bat and flag.txt.
+
+If we disable shutdown.bat.bat, we prevent the system from shutting down upon logging in, and
+opening flag.txt reveals the flag.
+
+{i_know_i_clicked_on_wrong_things}
