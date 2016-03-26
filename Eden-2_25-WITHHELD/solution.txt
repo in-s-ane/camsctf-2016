@@ -1,0 +1,13 @@
+Running pdfinfo on the PDF from Eden 1 gives us the initials of the author are
+A.M.
+
+No idea how but one of our members found
+http://cscbook.camscsc.org/profile/stringsinCsharp
+
+Going to the groups brings us to the HH CSC page:
+http://cscbook.camscsc.org/groups/profile/83/hh-csc
+
+The members page gives us one person with initials A.M.
+
+Flag: {Alice Minh}
+
