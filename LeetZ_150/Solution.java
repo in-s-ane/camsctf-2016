@@ -4,8 +4,8 @@ import java.nio.file.Paths;
 public class Solution {
     public static void main(String[] args) throws Exception {
         String data = new String(Files.readAllBytes(Paths.get("leet.txt"))).trim();
-		String decompressed = LZString.decompressHexString(new String(data));
-		System.out.println(decompressed.replace("flag", "")); // Flag format...
+        String decompressed = LZString.decompressHexString(new String(data));
+        System.out.println(decompressed.replace("flag", "")); // Flag format...
     }
 }
 
