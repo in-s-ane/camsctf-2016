@@ -9,23 +9,32 @@ keys = open('data.txt').readlines()
 for x in range(len(keys)):
     split = keys[x].strip().split(":")
     # Only keep the packets that are valid
+    if len(split) != 8:
+        continue
 
     if split[2] != "00" and split[3] == "00":
+        control = False
         shifted = False
         # Shift key
         if split[0] == "02":
             shifted = True
-        nums.append((int(split[2], 16), shifted))
+        if split[0] == "01":
+            control = True
+        nums.append((int(split[2], 16), shifted, control))
 
 caps = False
 
 output = ""
 for x in range(len(nums)):
-    num = nums[x][0]
-    shifted = nums[x][1]
+    n = nums[x]
+    num = n[0]
+    shifted = n[1]
+    control = n[2]
     if num in mappings:
         if shifted:
             output += shifted_mappings[num]
+        elif control:
+            output += "CONTROL-%s" % mappings[num]
         else:
             if caps:
                 output += mappings[num].upper()
