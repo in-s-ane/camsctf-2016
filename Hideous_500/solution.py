@@ -15,11 +15,13 @@ for x in range(len(keys)):
     if split[2] != "00" and split[3] == "00":
         control = False
         shifted = False
-        # Shift key
         if split[0] == "02":
+            # Shift was held
             shifted = True
         if split[0] == "01":
+            # Control was held
             control = True
+
         nums.append((int(split[2], 16), shifted, control))
 
 caps = False
@@ -49,4 +51,26 @@ for x in range(len(nums)):
 
 print output
 
-# $ tshark -r hideous.pcap -T fields -e usb.capdata -Y 'usb.endpoint_number == 0x81 && frame.cap_len == 35' > data.txt
+# Looking at the packets suggests that the traffic being sent around consists of keyboard keystrokes.
+# We can take the dump of all the relevant keystrokes by running the following:
+# $ tshark -r hideous.pcap -T fields -e usb.capdata -Y "usb.data_len == 8 && usb.endpoint_number == 0x81" > data.txt
+
+# Using the keyboard mappings found at http://www.freebsddiary.org/APC/usb_hid_usages.php, we can decode the data.
+
+# $ python solution.py
+# faceb
+# lol well my favorite is 15
+# Really?
+# anyway, have to finish my fafsa whe sendiig u the flag :p
+# kk
+# so the flag is
+# {a_h0rr1bl3_FLgoo.gl/KG43Sy
+# CONTROL-cCONTROL-v_for_a_horrible_challenge}
+# alright, they'll have a lot of fun
+# see ya
+
+# Going to the goo.gl link reveals a list of insecure passwords, and we can note that the person likes the password at 15, which is 1qaz2wsx.
+# Clearly, they copy/pasted the password to create the flag.
+# Something's wrong with my delete code, but playing around with the flag reveals the correct one:
+
+# {a_h0rr1bl3_FLAG_1qaz2wsx_for_a_horrible_challenge}
