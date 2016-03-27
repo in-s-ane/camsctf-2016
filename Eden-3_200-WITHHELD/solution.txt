@@ -1,0 +1,14 @@
+Looking at Eden Sterling's profile on the cscbook page, we find that his username is stringsinCsharp.
+http://cscbook.camscsc.org/profile/stringsinCsharp
+
+However, the password is hidden in the Eden_Drive somewhere.
+A previous hint on the home page tell us to check for deleted files, which we can do using testdisk or photorec.
+
+Trying to extract lost files using `testdisk` reveals 5 files, with one of them being a pdf. However, when I tried to
+extract text from the pdf using `pdftotext`, I found the username (which was already known), but the password was a bunch of
+unicode. Searching online, I found a tool called PDF Extract, which can be found at http://www.pdf-tools.com/pdf/pdf-extract-content-metadata-text.aspx.
+
+If we download the shell version and run it on the pdf, we extract rest of text, including the password.
+With this information, we can construct the flag.
+
+{stringsinCsharp|letmein321!}
