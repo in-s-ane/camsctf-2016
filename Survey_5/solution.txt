@@ -1,0 +1,3 @@
+Open the link to the survey and find the flag at the top.
+
+{we_appreciate_your_participation}
