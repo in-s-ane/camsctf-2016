@@ -13,3 +13,5 @@ findSum = sum [x | x<-[1000013824,1000030208..9999999999], palindrome x]
 
 main = do
   putStrLn $ show findSum
+
+{19473563648}
