@@ -1,0 +1,21 @@
+Logging into the NO. CO website, we find a hidden link:
+<a href="Files.zip" rel="/files">Files.zip</a>
+
+Ignoring Files.zip (for now), if we go to /files, we find one file called transactions.xlsx.
+Eden 8 is about finding the oldest transaction, so clearly this is relevant.
+http://nobiascorp.camscsc.org/files/transactions.xlsx
+
+Downloading and opening the file reveals that there are a ton of characters and will make libreoffice
+not respond. Unzipping the file and looking at the xml shows that a theme is being loaded, which
+we want to remove.
+
+We can remove the theme from the file by doing the following:
+
+$ unzip transactions.xlsx
+$ rm xl/theme/theme1.xml
+$ zip -r repaired.xlsx *
+
+Opening repaired.xlsx will show the transactions between NO. CO. and its clients.
+All we need to do now is pick the earliest date.
+
+{12/06/2014}
