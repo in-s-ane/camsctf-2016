@@ -1,0 +1,8 @@
+Looking up Lujing Cen on Google reveals that he goes by the pseudonym bobbyluig.
+Looking up bobbyluig on Google and scrolling through a few pages reveals a page on
+arcade prehacks.
+http://www.arcadeprehacks.com/game/1285/Super-City-3.html
+
+The id of the game can be seen in the url, and is 1285
+
+{bobbyluig|1285}

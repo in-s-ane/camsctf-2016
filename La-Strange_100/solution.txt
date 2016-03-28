@@ -1,0 +1,12 @@
+Originally, I was going to solve this using numpy, but who needs to solve a Programming problem programatically?
+
+The problem name sounds a lot like "Lagrange", who was a mathematician. Looking up "lagrange cryptography",
+we find a method of encrypting data called "lagrange interpolation". In short, we need to find the equation
+that fits through all the given coordinates.
+
+Plugging the coordinates into http://www.dcode.fr/lagrange-interpolating-polynomial gives us the correct equation:
+
+f(x)=49x^10 + 57x^9 + 116x^8 + 104x^7 + 99x^6 + 51x^5 + 110x^4 + 116x^3 + 117x^2 + 114^x + 121
+
+If we take all the coefficients and turn them into characters, we get the flag:
+{19thc3ntury}

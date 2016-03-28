@@ -1,0 +1,15 @@
+Running pdfinfo on the PDF from Eden 1 gives us the initials of the author are
+A.M.
+
+The pdf also seems to contain lots of streams, which we can extract using `pdfextract`.
+Looking at attachment.dump/streams/stream_2.dmp, we find a zip archive, which contains a disk
+image. If we mount the disk image, we find a lot of files and folders, most of them with incorrect suffixes.
+However, looking at my_cad/3126812.STEP, we find some hidden text at the bottom, containing the string
+http://cscbook.camscsc.org.
+
+Visiting the page leads us to a group called HH CSC, which presumably stands for Hacker High Computer Security Club.
+
+The members page gives us one person with initials A.M.
+http://cscbook.camscsc.org/groups/members/83
+
+{Alice Minh}

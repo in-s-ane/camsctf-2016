@@ -1,0 +1,23 @@
+Logging into the cscbook website with Eden Sterling's credentials, we find that we now have access to a lot more stuff.
+
+Going to Eden Sterling's profile page, we find a website listed:
+Website: http://nobiascorp.camscsc.org
+
+Visiting the website, we find that we are not using the "right" browser. Looking at the source, we find a comment:
+<!-- User Agent != nobiasbrowser -->
+
+If we change our useragent to "nobiasbrowser", we are led to a login page at
+http://nobiascorp.camscsc.org/waieopbhd.php
+
+Located in the source of this page is a seemingly base64 encoded string.
+<!-- 0FBN3jxrz6dfb4Kkh/n6hA== -->
+
+However, when we decode it, we don't get anything that resembles a password. Playing around with the string
+revealed that encoding it in hex made it look an awful lot like a hash.
+
+d0504dde3c6bcfa75f6f82a487f9fa84
+
+The hash is actually an md4 hash, which we can crack using an online tool:
+https://md5hashing.net/hash/md4/d0504dde3c6bcfa75f6f82a487f9fa84
+
+{elevatemygradez}

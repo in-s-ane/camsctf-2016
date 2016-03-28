@@ -1,3 +1,0 @@
-play.camsctf.com	FALSE	/	FALSE	1459729281	sessionid	svhefjggioxklmzfgfbhv2y6qifv985d
-.camsctf.com	TRUE	/	FALSE	1461021240	__cfduid	d4515c0789c8924f61820cd4859353c6f1429485244
-play.camsctf.com	FALSE	/	FALSE	1489977976	csrftoken	LG7SnY2bDGHDAsVb2HZpDV2lL6i49aeG

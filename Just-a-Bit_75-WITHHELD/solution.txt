@@ -1,8 +1,0 @@
-Looking at the picture in Stegsolve revealed that there are pixels in the top left corner of the picture
-that are not truly white. However, when we try extracting that data hidden within the red, green, and
-blue planes, Stegsolve bugs out when we try exporting this data, and I couldn't get it to work
-with PIL, so I resorted to downloading and installing zsteg.
-
-Running zsteg on the picture reveals the flag.
-
-{l3ast_S1gniFicant_M0sT_s1gNiFicant}

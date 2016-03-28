@@ -1,7 +1,0 @@
-Running `binwalk` on the executable reveals that there are a couple of pngs within, so let's extract those.
-
-$ binwalk --dd="png:png" flag.exe
-
-Visiting _flag.exe.extracted/ and viewing both photos reveals that the flag is in 24120.png
-
-{the_key_is_flag}

