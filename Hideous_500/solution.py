@@ -70,7 +70,7 @@ print output
 # see ya
 
 # Going to the goo.gl link reveals a list of insecure passwords, and we can note that the person likes the password at 15, which is 1qaz2wsx.
-# Clearly, they copy/pasted the password to create the flag.
+# Clearly, they copy/pasted the password as part of the flag.
 # Something's wrong with my delete code, but playing around with the flag reveals the correct one:
 
 # {a_h0rr1bl3_FLAG_1qaz2wsx_for_a_horrible_challenge}

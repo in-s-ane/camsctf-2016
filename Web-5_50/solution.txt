@@ -50,3 +50,6 @@ Submit the password: PaSswOrD1@3$5^
 
 Flag: {never_trust_what_a_tr0ll}
 
+Or you just do this:
+
+$ curl http://web.camsctf.com/5/check.php --data "answer=PaSswOrD1@3\$5^"

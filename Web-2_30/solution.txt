@@ -1,3 +1,6 @@
-Guessing 'password' as the password gives us the flag.
+Looking at the source of the page gives us the following information about the password form:
+<input type="password" name="password" password="password"><br>
+
+The password is "password".
 
 {all_in_the_c0de}

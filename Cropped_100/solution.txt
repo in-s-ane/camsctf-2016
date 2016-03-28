@@ -13,7 +13,7 @@ Since the picture tells us that the flag is just below, let's increase the heigh
 the image, changing the above to
 02 C2 01 82
 
-I used bless to modify the hex.
+The code for modifying the size can be found in resize.py
 
 Open the resized image to find the flag:
 

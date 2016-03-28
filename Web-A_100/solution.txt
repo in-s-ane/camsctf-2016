@@ -1,8 +1,7 @@
 In a comment in the source, we find a base64 encoded string and text on the page suggests the method of encryption.
 Let's just reverse the encryption method using php.
 
-$a="eJwFwdEOgiAUANAP8gEzGfbgwx20StBpsLZ8pa4jI2O2TL6+c4oI791L7wEzWL1BGBMyzy6MfMGpCKuEFlMeH/J5F85z475qIKJCVkx1pJ3bEtldfU1Y6pQN1jGqoYdG5Zkh+mP18JPiFBpYc1Fz3io83I5qk7SsWpYLFWeAsvwDZNoqeQ==";
-echo base64_decode(gzdecode(base64_decode(gzinflate(base64_decode(gzuncompress(base64_decode($a)))))));
+$ php -r '$a="eJwFwdEOgiAUANAP8gEzGfbgwx20StBpsLZ8pa4jI2O2TL6+c4oI791L7wEzWL1BGBMyzy6MfMGpCKuEFlMeH/J5F85z475qIKJCVkx1pJ3bEtldfU1Y6pQN1jGqoYdG5Zkh+mP18JPiFBpYc1Fz3io83I5qk7SsWpYLFWeAsvwDZNoqeQ=="; echo base64_decode(gzdecode(base64_decode(gzinflate(base64_decode(gzuncompress(base64_decode($a)))))));'
 
 $password = "gzip_bzip_7zip_zip"; echo $password;
 

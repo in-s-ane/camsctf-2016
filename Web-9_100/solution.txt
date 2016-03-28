@@ -1,8 +1,9 @@
-The description leads you to believe it's blind sql injection,
-but it's not.
+The description leads you to believe it's blind sql injection, but it's not.
 
-The css file used is style.css. I never learned css so I don't know what
-`fontpass123` is, but it looked suspicious and sure enough, it was the
-password.
+Looking at the css file of the page reveals the following line:
+font-family: 'Ubuntu Mono', sans-serif, fontpass123;
+
+fontpass123 is definitely not a valid font, but it sounds a lot like a password.
+Inputting that as the password gives us the flag.
 
 {i_l00ked_everywhere}

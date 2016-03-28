@@ -1,5 +1,5 @@
 The javascript is just running a function on some arguments, so we probably want to print out the result of that
-evaluation. We can do so by redefining the function to console.log(b) before returning it.
+evaluation. We can do so by redefining the function to call console.log(b) before returning it.
 
 As a result, we get:
 

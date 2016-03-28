@@ -15,5 +15,10 @@ while :; do
     sleep 15m
 done
 
+# Just like last year, there is a one hour time frame where the flag becomes
+# visible in the problem's description really early in the morning.
+
+# This script will request the problem description in 15 minute intervals.
+
 # {"description": "\n\t\t<p>Flag: {0ne...m0re...ch4llenge}</p>\n\t\t", "solves": 4}
 # {0ne...m0re...ch4llenge}
